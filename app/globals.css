@@ -9,13 +9,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: radial-gradient(72.65% 50% at 50% 100%, #FFF 24%, #D7D7D7 100%);
+    --foreground: #282828;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Kreon, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
