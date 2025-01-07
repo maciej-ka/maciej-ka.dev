@@ -1,0 +1,25 @@
+:root {
+  --fg: #373006;
+  --bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e0dccf;
+    --bg: #181818;
+  }
+}
+
+body {
+  color: var(--fg);
+  background: var(--bg);
+  font-family: Nunito, serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+  text-wrap: balance;
+  box-sizing: border-box;
+}
