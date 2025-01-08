@@ -52,6 +52,37 @@ const projectData: Project[] = [
   },
 
   /**
+   * Zamics
+   */
+  {
+    name: "Zamics",
+    company: "Zeppelin Labs",
+    position: "Mobile web developer",
+    start: new Date("2021-06"),
+    end: new Date("2021-12"),
+
+    description:
+      "App to run construction site warehouse using RFID and QR codes",
+    link: "https://zamics.de/en/",
+    remote: true,
+    form: "contractor",
+    softwareHouse: "Inetum",
+    teamSize: 3,
+
+    area: "frontend",
+    skills: [
+      "Android",
+      "CSS",
+      "Docker",
+      "JavaScript",
+      "QR Code",
+      "RFID",
+      "Vue",
+      "Vuex",
+    ],
+  },
+
+  /**
    * AEC View
    */
   {
