@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+### Skills Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Visit hosted
 
-Currently, two official plugins are available:
+https://www.maciej-ka.dev/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Run on local
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone git@github.com:maciej-ka/maciej-ka.dev.git
+cd maciej-ka.dev
+npm i
+npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+And visit localhost:5173
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react"
+#### Run on Docker
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-})
+Dockerfile contains nginx production setup.  
+To test container locally
+
+```bash
+npm run start:docker
 ```
+
+And visit localhost:8000
+
+There is also a debug command in case image has  
+problems and needs to be inspected in bash
+
+```bash
+npm run debug:docker
+```
+
+#### Tests and checks
+
+Project has several tests and checks.  
+They are all reported in pull requests
+
+- prettier `npm run test:prettier`
+- eslint `npm run test:eslint`
+- typescript `npm run test:typescript`
+- playwright `npm run test:integration`
+
+Run them all locally
+
+```bash
+npm test
+```
+
+Fix ESLint and Prettier
+
+```bash
+npm run eslint:fix
+npm run prettier:fix
+```
+
+Start Playwright UI client
+
+```bash
+npm run test:integration:ui
+```
+
+#### Links
+
+[Figma design](https://www.figma.com/design/AcmzPsGSY5WzvuiS4RlWPS/Skills-Portfolio?node-id=0-1&t=93soLU4iDki44hXi-1)
