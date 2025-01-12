@@ -21,7 +21,7 @@ Dockerfile contains nginx production setup.
 To test container locally
 
 ```bash
-npm run start:docker
+npm run docker:start
 ```
 
 And visit localhost:8000
@@ -30,7 +30,7 @@ There is also a debug command in case image has
 problems and needs to be inspected in bash
 
 ```bash
-npm run debug:docker
+npm run docker:debug
 ```
 
 #### Tests and checks

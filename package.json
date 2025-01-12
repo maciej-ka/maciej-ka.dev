@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
-    "debug:docker": "docker build -t skills-portfolio . && docker run --rm -it skills-portfolio bash",
+    "docker:debug": "docker build -t skills-portfolio . && docker run --rm -it skills-portfolio bash",
+    "docker:start": "docker build -t skills-portfolio . && docker run --rm -p 8000:80 skills-portfolio",
     "eslint:fix": "eslint . --fix",
     "prettier:fix": "prettier --write --list-different .",
     "start": "vite",
-    "start:docker": "docker build -t skills-portfolio . && docker run --rm -p 8000:80 skills-portfolio",
     "test": "npm run test:prettier && npm run test:eslint && npm run test:typescript && npm run test:integration",
     "test:eslint": "eslint .",
     "test:integration": "playwright test",
