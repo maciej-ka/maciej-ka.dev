@@ -2,17 +2,26 @@ type Project = {
   name: string
   company: string
   position: string
+  lead?: boolean
   start: Date
+  /**
+   * Month which had the last day of work.
+   * 2024-12 is like saying contract ended on December
+   * 31th is most likely the last day of that contract.
+   */
   end?: Date
 
   description: string
   link?: string
+  /** Is a smaller project, a side project. */
+  side?: boolean
   remote: boolean
-  form: "contractor"
-  softwareHouse: string
-  teamSize: number
+  form: "contractor" | "freelancer"
+  softwareHouse?: string
+  /** Team size, including myself. */
+  team: number
 
-  area: "frontend" | "fullstack" | "analysis"
+  area: "backend" | "frontend" | "fullstack" | "analysis"
   skills: string[]
 }
 
@@ -23,7 +32,7 @@ const projectData: Project[] = [
   {
     name: "Yousty",
     company: "Yousty",
-    position: "Senior frontend developer",
+    position: "Senior Frontend Developer",
     start: new Date("2024-11"),
     end: new Date("2024-12"),
 
@@ -33,7 +42,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Useo",
-    teamSize: 7,
+    team: 7,
 
     area: "frontend",
     skills: [
@@ -57,17 +66,18 @@ const projectData: Project[] = [
   {
     name: "Zamics",
     company: "Zeppelin Labs",
-    position: "Mobile web developer",
+    position: "Mobile Web Developer",
     start: new Date("2021-06"),
     end: new Date("2021-12"),
 
     description:
       "App to run construction site warehouse using RFID and QR codes",
+    side: true,
     link: "https://zamics.de/en/",
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 3,
+    team: 3,
 
     area: "frontend",
     skills: [
@@ -88,7 +98,8 @@ const projectData: Project[] = [
   {
     name: "AEC.View",
     company: "Zeppelin Power Systems",
-    position: "Lead developer",
+    position: "Lead Fullstack Developer",
+    lead: true,
     start: new Date("2020-02"),
     end: new Date("2024-07"),
 
@@ -98,7 +109,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 4,
+    team: 4,
 
     area: "fullstack",
     skills: [
@@ -126,7 +137,7 @@ const projectData: Project[] = [
   {
     name: "Klickrent",
     company: "Klickrent",
-    position: "Web developer",
+    position: "Senior Frontend Developer",
     start: new Date("2019-05"),
     end: new Date("2020-01"),
 
@@ -135,7 +146,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 4,
+    team: 4,
 
     area: "frontend",
     skills: [
@@ -155,7 +166,8 @@ const projectData: Project[] = [
   {
     name: "Smart City",
     company: "Deutche Telekom",
-    position: "Lead web developer",
+    position: "Lead Web Developer",
+    lead: true,
     start: new Date("2018-11"),
     end: new Date("2019-02"),
 
@@ -163,7 +175,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 2,
+    team: 2,
 
     area: "frontend",
     skills: [
@@ -191,7 +203,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 2,
+    team: 2,
 
     area: "analysis",
     skills: ["UI design", "Sketch"],
@@ -203,15 +215,16 @@ const projectData: Project[] = [
   {
     name: "Globalmatix",
     company: "Globalmatix",
-    position: "Frontend developer",
+    position: "Frontend Developer",
     start: new Date("2018-08"),
     end: new Date("2024-10"),
 
     description: "Utility to manage reporting devices installed in cars",
+    side: true,
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 2,
+    team: 2,
 
     area: "frontend",
     skills: [
@@ -236,12 +249,12 @@ const projectData: Project[] = [
   },
 
   /**
-   * Immmr
+   * Immmr Frontend
    */
   {
     name: "Immmr",
     company: "Deutsche Telekom",
-    position: "Web developer",
+    position: "Frontend Developer",
     start: new Date("2016-12"),
     end: new Date("2018-07"),
 
@@ -249,7 +262,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 8,
+    team: 8,
 
     area: "frontend",
     skills: [
@@ -270,12 +283,12 @@ const projectData: Project[] = [
   },
 
   /**
-   * Immmr
+   * Immmr Backend
    */
   {
     name: "Immmr",
     company: "Deutsche Telekom",
-    position: "Web developer",
+    position: "Backend Developer",
     start: new Date("2016-08"),
     end: new Date("2016-11"),
 
@@ -283,7 +296,7 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    teamSize: 6,
+    team: 6,
 
     area: "fullstack",
     skills: [
@@ -298,6 +311,243 @@ const projectData: Project[] = [
       "Rspec",
       "Ruby",
       "SQL",
+    ],
+  },
+
+  /**
+   * IFAB
+   */
+  {
+    name: "IFAB",
+    company: "FIFA",
+    position: "Lead Web Developer",
+    lead: true,
+    start: new Date("2016-01"),
+    end: new Date("2016-05"),
+
+    description: "Portal about football rules",
+    link: "theifab.com",
+    remote: true,
+    form: "contractor",
+    softwareHouse: "Me & My Friends",
+    team: 2,
+
+    area: "fullstack",
+    skills: [
+      "Angular",
+      "Bootstrap",
+      "CoffeeScript",
+      "CSS animations",
+      "CSS",
+      "Elasticsearch",
+      "Gradle",
+      "gulp",
+      "Hibernate",
+      "Jade",
+      "Java",
+      "JavaScript",
+      "PostgreSQL",
+      "Responsive Design",
+      "Sass",
+      "Spring",
+      "SQL",
+      "UML",
+    ],
+  },
+
+  /**
+   * DSO, Apax
+   */
+  {
+    name: "DSO",
+    company: "Apax",
+    position: "Web Developer",
+    start: new Date("2015-12"),
+    end: new Date("2015-12"),
+
+    description: "Prototype of online analytics services",
+    remote: true,
+    form: "freelancer",
+    team: 1,
+
+    area: "fullstack",
+    skills: [
+      "Bootstrap",
+      "Capistrano",
+      "Capybara",
+      "CoffeeScript",
+      "CSS animations",
+      "CSS",
+      "Ember",
+      "Haml",
+      "JavaScript",
+      "Minitest",
+      "PostgreSQL",
+      "Rails",
+      "Ruby",
+      "Sass",
+      "Selenium",
+      "SQL",
+      "UI design",
+      "UML",
+    ],
+  },
+
+  /**
+   * SAWP, Duplikaty
+   */
+  {
+    name: "Duplikaty",
+    company: "SAWP",
+    position: "Web Developer",
+    start: new Date("2015-11"),
+    end: new Date("2015-11"),
+
+    description: "Utility application to merge database duplicates",
+    remote: true,
+    form: "freelancer",
+    softwareHouse: "Motabi",
+    team: 2,
+
+    area: "fullstack",
+    skills: [
+      "Capybara",
+      "CoffeeScript",
+      "CSS",
+      "Ember",
+      "Haml",
+      "JavaScript",
+      "Minitest",
+      "PostgreSQL",
+      "Rails",
+      "Ruby",
+      "Sass",
+      "Selenium",
+      "SQL",
+      "UI design",
+      "UML",
+    ],
+  },
+
+  /**
+   * the Incrediblest
+   */
+  {
+    name: "the Incrediblest",
+    company: "Motabi",
+    position: "Web Developer",
+    start: new Date("2015-10"),
+    end: new Date("2015-10"),
+
+    description: "A TODO planner",
+    remote: true,
+    form: "freelancer",
+    team: 1,
+
+    area: "backend",
+    skills: ["Capybara", "Minitest", "PayPal", "Rails", "Ruby", "Selenium"],
+  },
+
+  /**
+   * SAWP, SDEG
+   */
+  {
+    name: "SDEG",
+    company: "SAWP",
+    position: "Web Developer",
+    start: new Date("2015-08"),
+    end: new Date("2015-09"),
+
+    description: "Document workflow for exchanging artist royalties",
+    remote: true,
+    form: "freelancer",
+    softwareHouse: "Motabi",
+    team: 2,
+
+    area: "fullstack",
+    skills: [
+      "Ruby",
+      "Rails",
+      "RSpec",
+      "Capybara",
+      "Selenium",
+      "Angular",
+      "JavaScript",
+      "CoffeeScript",
+      "Haml",
+      "Sass",
+      "CSS",
+      "PostgreSQL",
+      "UML",
+      "SQL",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Motabi Intelligence
+   */
+  {
+    name: "Motabi Intelligence",
+    company: "Motabi",
+    position: "Web Developer",
+    start: new Date("2015-05"),
+    end: new Date("2015-07"),
+
+    description: "Panel to configure reports with charts and datasources",
+    remote: true,
+    form: "freelancer",
+    team: 1,
+
+    area: "fullstack",
+    skills: [
+      "Angular",
+      "Capybara",
+      "CoffeeScript",
+      "CSS animations",
+      "CSS",
+      "Haml",
+      "JavaScript",
+      "PostgreSQL",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "Sass",
+      "Selenium",
+      "SQL",
+      "UML",
+    ],
+  },
+
+  /**
+   * Cert
+   */
+  {
+    name: "CERT",
+    company: "Orange Polska",
+    position: "Web developer",
+    start: new Date("2015-01"),
+    end: new Date("2015-04"),
+
+    description: "Portal with member zone reports",
+    link: "cert.orange.pl",
+    remote: true,
+    form: "freelancer",
+    softwareHouse: "Motabi",
+    team: 2,
+
+    area: "backend",
+    skills: [
+      "Capistrano",
+      "Capybara",
+      "Haml",
+      "PostgreSQL",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "SOAP",
+      "SQL",
+      "UML",
     ],
   },
 ]
