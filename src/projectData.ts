@@ -1,8 +1,6 @@
 type Project = {
   name: string
   company: string
-  position: string
-  lead?: boolean
   start: Date
   /**
    * Month which had the last day of work.
@@ -13,14 +11,16 @@ type Project = {
 
   description: string
   link?: string
-  /** Is a smaller project, a side project. */
+  /** Is a side project, a smaller project. */
   side?: boolean
-  remote: boolean
-  form: "contractor" | "freelancer"
+  remote?: boolean
+  form: "contractor" | "freelancer" | "employee"
   softwareHouse?: string
   /** Team size, including myself. */
   team: number
 
+  title: string
+  lead?: boolean
   area: "backend" | "frontend" | "fullstack" | "analysis"
   skills: string[]
 }
@@ -32,7 +32,6 @@ const projectData: Project[] = [
   {
     name: "Yousty",
     company: "Yousty",
-    position: "Senior Frontend Developer",
     start: new Date("2024-11"),
     end: new Date("2024-12"),
 
@@ -44,6 +43,7 @@ const projectData: Project[] = [
     softwareHouse: "Useo",
     team: 7,
 
+    title: "Senior Frontend Developer",
     area: "frontend",
     skills: [
       "Atomic design",
@@ -66,7 +66,6 @@ const projectData: Project[] = [
   {
     name: "Zamics",
     company: "Zeppelin Labs",
-    position: "Mobile Web Developer",
     start: new Date("2021-06"),
     end: new Date("2021-12"),
 
@@ -79,6 +78,7 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 3,
 
+    title: "Mobile Web Developer",
     area: "frontend",
     skills: [
       "Android",
@@ -98,8 +98,6 @@ const projectData: Project[] = [
   {
     name: "AEC.View",
     company: "Zeppelin Power Systems",
-    position: "Lead Fullstack Developer",
-    lead: true,
     start: new Date("2020-02"),
     end: new Date("2024-07"),
 
@@ -111,6 +109,8 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 4,
 
+    title: "Lead Fullstack Developer",
+    lead: true,
     area: "fullstack",
     skills: [
       "AWS",
@@ -137,7 +137,6 @@ const projectData: Project[] = [
   {
     name: "Klickrent",
     company: "Klickrent",
-    position: "Senior Frontend Developer",
     start: new Date("2019-05"),
     end: new Date("2020-01"),
 
@@ -148,6 +147,7 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 4,
 
+    title: "Senior Frontend Developer",
     area: "frontend",
     skills: [
       "CSS",
@@ -166,8 +166,6 @@ const projectData: Project[] = [
   {
     name: "Smart City",
     company: "Deutche Telekom",
-    position: "Lead Web Developer",
-    lead: true,
     start: new Date("2018-11"),
     end: new Date("2019-02"),
 
@@ -177,6 +175,8 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 2,
 
+    title: "Lead Frontend Developer",
+    lead: true,
     area: "frontend",
     skills: [
       "CSS",
@@ -197,7 +197,6 @@ const projectData: Project[] = [
     company: "Nordex",
     start: new Date("2018-10"),
     end: new Date("2018-11"),
-    position: "Analyst",
 
     description: "Web app for monitoring large wind farms",
     remote: true,
@@ -205,6 +204,7 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 2,
 
+    title: "Analyst",
     area: "analysis",
     skills: ["UI design", "Sketch"],
   },
@@ -215,7 +215,6 @@ const projectData: Project[] = [
   {
     name: "Globalmatix",
     company: "Globalmatix",
-    position: "Frontend Developer",
     start: new Date("2018-08"),
     end: new Date("2024-10"),
 
@@ -224,8 +223,9 @@ const projectData: Project[] = [
     remote: true,
     form: "contractor",
     softwareHouse: "Inetum",
-    team: 2,
+    team: 1,
 
+    title: "Frontend Developer",
     area: "frontend",
     skills: [
       "AWS",
@@ -254,7 +254,6 @@ const projectData: Project[] = [
   {
     name: "Immmr",
     company: "Deutsche Telekom",
-    position: "Frontend Developer",
     start: new Date("2016-12"),
     end: new Date("2018-07"),
 
@@ -264,6 +263,7 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 8,
 
+    title: "Frontend Developer",
     area: "frontend",
     skills: [
       "Babel",
@@ -288,7 +288,6 @@ const projectData: Project[] = [
   {
     name: "Immmr",
     company: "Deutsche Telekom",
-    position: "Backend Developer",
     start: new Date("2016-08"),
     end: new Date("2016-11"),
 
@@ -298,6 +297,7 @@ const projectData: Project[] = [
     softwareHouse: "Inetum",
     team: 6,
 
+    title: "Backend Developer",
     area: "fullstack",
     skills: [
       "CSS",
@@ -320,8 +320,6 @@ const projectData: Project[] = [
   {
     name: "IFAB",
     company: "FIFA",
-    position: "Lead Web Developer",
-    lead: true,
     start: new Date("2016-01"),
     end: new Date("2016-05"),
 
@@ -332,6 +330,8 @@ const projectData: Project[] = [
     softwareHouse: "Me & My Friends",
     team: 2,
 
+    title: "Lead Developer",
+    lead: true,
     area: "fullstack",
     skills: [
       "Angular",
@@ -361,7 +361,6 @@ const projectData: Project[] = [
   {
     name: "DSO",
     company: "Apax",
-    position: "Web Developer",
     start: new Date("2015-12"),
     end: new Date("2015-12"),
 
@@ -370,6 +369,7 @@ const projectData: Project[] = [
     form: "freelancer",
     team: 1,
 
+    title: "Web Developer",
     area: "fullstack",
     skills: [
       "Bootstrap",
@@ -399,7 +399,6 @@ const projectData: Project[] = [
   {
     name: "Duplikaty",
     company: "SAWP",
-    position: "Web Developer",
     start: new Date("2015-11"),
     end: new Date("2015-11"),
 
@@ -409,6 +408,7 @@ const projectData: Project[] = [
     softwareHouse: "Motabi",
     team: 2,
 
+    title: "Web Developer",
     area: "fullstack",
     skills: [
       "Capybara",
@@ -435,7 +435,6 @@ const projectData: Project[] = [
   {
     name: "the Incrediblest",
     company: "Motabi",
-    position: "Web Developer",
     start: new Date("2015-10"),
     end: new Date("2015-10"),
 
@@ -444,6 +443,7 @@ const projectData: Project[] = [
     form: "freelancer",
     team: 1,
 
+    title: "Web Developer",
     area: "backend",
     skills: ["Capybara", "Minitest", "PayPal", "Rails", "Ruby", "Selenium"],
   },
@@ -454,7 +454,6 @@ const projectData: Project[] = [
   {
     name: "SDEG",
     company: "SAWP",
-    position: "Web Developer",
     start: new Date("2015-08"),
     end: new Date("2015-09"),
 
@@ -464,6 +463,7 @@ const projectData: Project[] = [
     softwareHouse: "Motabi",
     team: 2,
 
+    title: "Web Developer",
     area: "fullstack",
     skills: [
       "Ruby",
@@ -490,7 +490,6 @@ const projectData: Project[] = [
   {
     name: "Motabi Intelligence",
     company: "Motabi",
-    position: "Web Developer",
     start: new Date("2015-05"),
     end: new Date("2015-07"),
 
@@ -499,6 +498,7 @@ const projectData: Project[] = [
     form: "freelancer",
     team: 1,
 
+    title: "Web Developer",
     area: "fullstack",
     skills: [
       "Angular",
@@ -525,7 +525,6 @@ const projectData: Project[] = [
   {
     name: "CERT",
     company: "Orange Polska",
-    position: "Web developer",
     start: new Date("2015-01"),
     end: new Date("2015-04"),
 
@@ -536,6 +535,7 @@ const projectData: Project[] = [
     softwareHouse: "Motabi",
     team: 2,
 
+    title: "Web developer",
     area: "backend",
     skills: [
       "Capistrano",
@@ -546,6 +546,123 @@ const projectData: Project[] = [
       "RSpec",
       "Ruby",
       "SOAP",
+      "SQL",
+      "UML",
+    ],
+  },
+
+  /**
+   * Logneto
+   */
+  {
+    name: "Logneto",
+    company: "DMT",
+    start: new Date("2014-06"),
+    end: new Date("2014-12"),
+
+    description: "Warehouse solution for eCommerce",
+    remote: true,
+    form: "employee",
+    softwareHouse: "Hemnes",
+    team: 3,
+
+    title: "Web developer",
+    lead: true,
+    area: "fullstack",
+    skills: [
+      "Bootstrap",
+      "Capistrano",
+      "Capybara",
+      "CSS",
+      "Haml",
+      "PostgreSQL",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "SOAP",
+      "SQL",
+      "UI design",
+      "UML",
+    ],
+  },
+
+  /**
+   * Personal Lawyers
+   */
+  {
+    name: "Personal Lawyers",
+    company: "Juszkiewicz Lawyers",
+    start: new Date("2014-05"),
+    end: new Date("2014-05"),
+
+    description: "Messanger for office and its customers",
+    form: "employee",
+    softwareHouse: "Hemnes",
+    team: 2,
+
+    title: "Web developer",
+    lead: true,
+    area: "backend",
+    skills: [
+      "Capistrano",
+      "Capybara",
+      "Haml",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Top market commercials player
+   */
+  {
+    name: "Commercial videos player",
+    company: "Top Market",
+    start: new Date("2014-03"),
+    end: new Date("2014-04"),
+
+    description: "Supermarket commercial player for Raspberry Pi",
+    form: "employee",
+    softwareHouse: "Hemnes",
+    team: 1,
+
+    title: "Developer",
+    area: "backend",
+    skills: [
+      "Capistrano",
+      "Capybara",
+      "Haml",
+      "Rails",
+      "Raspberry Pi",
+      "RSpec",
+      "Ruby",
+    ],
+  },
+
+  {
+    name: "Punktożercy",
+    company: "Top Market",
+    start: new Date("2013-12"),
+    end: new Date("2014-02"),
+
+    description: "Loyalty points shop",
+    form: "employee",
+    softwareHouse: "Hemnes",
+    team: 2,
+
+    title: "Web Developer",
+    lead: true,
+    area: "backend",
+    skills: [
+      "Capistrano",
+      "Capybara",
+      "Haml",
+      "PostgreSQL",
+      "Rails",
+      "RSpec",
+      "Ruby",
       "SQL",
       "UML",
     ],
