@@ -21,7 +21,13 @@ type Project = {
 
   title: string
   lead?: boolean
-  area: "backend" | "frontend" | "fullstack" | "analysis"
+  area:
+    | "backend"
+    | "frontend"
+    | "fullstack"
+    | "analysis"
+    | "mobile"
+    | "management"
   skills: string[]
 }
 
@@ -566,7 +572,7 @@ const projectData: Project[] = [
     softwareHouse: "Hemnes",
     team: 3,
 
-    title: "Web developer",
+    title: "Software Developer",
     lead: true,
     area: "fullstack",
     skills: [
@@ -600,7 +606,7 @@ const projectData: Project[] = [
     softwareHouse: "Hemnes",
     team: 2,
 
-    title: "Web developer",
+    title: "Software Developer",
     lead: true,
     area: "backend",
     skills: [
@@ -618,7 +624,7 @@ const projectData: Project[] = [
    * Top market commercials player
    */
   {
-    name: "Commercial videos player",
+    name: "Commercials player",
     company: "Top Market",
     start: new Date("2014-03"),
     end: new Date("2014-04"),
@@ -628,7 +634,7 @@ const projectData: Project[] = [
     softwareHouse: "Hemnes",
     team: 1,
 
-    title: "Developer",
+    title: "Software Developer",
     area: "backend",
     skills: [
       "Capistrano",
@@ -641,6 +647,9 @@ const projectData: Project[] = [
     ],
   },
 
+  /**
+   * Punktożercy
+   */
   {
     name: "Punktożercy",
     company: "Top Market",
@@ -652,7 +661,7 @@ const projectData: Project[] = [
     softwareHouse: "Hemnes",
     team: 2,
 
-    title: "Web Developer",
+    title: "Software Developer",
     lead: true,
     area: "backend",
     skills: [
@@ -666,6 +675,567 @@ const projectData: Project[] = [
       "SQL",
       "UML",
     ],
+  },
+
+  /**
+   * Bluewhite
+   */
+  {
+    name: "Bluewhite",
+    company: "One99",
+    start: new Date("2013-10"),
+    end: new Date("2013-11"),
+
+    description: "Doctor's appointment bookings",
+    form: "employee",
+    softwareHouse: "Beside the Park",
+    team: 4,
+
+    title: "Web developer",
+    area: "backend",
+    skills: ["Haml", "MySQL", "Rails", "Ruby", "SQL"],
+  },
+
+  /**
+   * Guarantees Box
+   */
+  {
+    name: "Guarantees box",
+    company: "Guarantees Box",
+    start: new Date("2013-07"),
+    end: new Date("2013-09"),
+
+    description: "Service to store digitalized receipts",
+    form: "employee",
+    softwareHouse: "Beside the Park",
+    team: 4,
+
+    title: "Web developer",
+    area: "backend",
+    skills: ["Haml", "MySQL", "Rails", "Ruby", "SQL"],
+  },
+
+  /**
+   * Induction game
+   */
+  {
+    name: "Induction game",
+    company: "Mondelēz International",
+    start: new Date("2013-01"),
+    end: new Date("2013-05"),
+
+    description: "Guide for new workers of company",
+    remote: true,
+    form: "employee",
+    softwareHouse: "Pracownia Gier Szkoleniowych",
+    team: 2,
+
+    title: "Lead web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "JS animations",
+      "MySQL",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "SQL",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Scott Wilson
+   */
+  {
+    name: "Document database",
+    company: "Scott Wilson",
+    start: new Date("2011-06"),
+    end: new Date("2011-10"),
+
+    description: "Documents storage with advanced search",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 1,
+
+    title: "Web developer",
+    area: "fullstack",
+    skills: [
+      "Doctrine",
+      "JavaScript",
+      "jQuery",
+      "JS animations",
+      "Lucene",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Podręczniki na poczcie
+   */
+  {
+    name: "Podręczniki na poczcie",
+    company: "Polish Post Offices",
+    start: new Date("2011-02"),
+    end: new Date("2011-05"),
+
+    description: "Purchase order system for post office.",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 1,
+
+    title: "Web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "Doctrine",
+      "JavaScript",
+      "jQuery",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Burda media
+   */
+  {
+    name: "Prerelease surveys",
+    company: "Burda International Polska",
+    start: new Date("2010-11"),
+    end: new Date("2011-01"),
+
+    description: "System to vote on upcoming issue content",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 2,
+
+    title: "Lead web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "Doctrine",
+      "JavaScript",
+      "jQuery",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+      "UI design",
+    ],
+  },
+
+  /**
+   * Open'er
+   */
+  {
+    name: "Open'er app",
+    company: "Heineken",
+    start: new Date("2010-07"),
+    end: new Date("2010-10"),
+
+    description: "Music festival android app",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 3,
+
+    title: "Mobile developer",
+    area: "mobile",
+    skills: ["Android", "Java"],
+  },
+
+  /**
+   * Myslovitz
+   */
+  {
+    name: "Myslovitz app",
+    company: "Myslovitz",
+    start: new Date("2010-03"),
+    end: new Date("2010-06"),
+
+    description: "Music band android app",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 3,
+
+    title: "Mobile developer",
+    area: "mobile",
+    skills: ["Android", "Java"],
+  },
+
+  /**
+   * Business Talents
+   */
+  {
+    name: "Business Talents",
+    company: "Business Talents",
+    start: new Date("2009-12"),
+    end: new Date("2010-02"),
+
+    description: "Webpage and custom CMS",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 2,
+
+    title: "Web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "Doctrine",
+      "JavaScript",
+      "jQuery",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+    ],
+  },
+
+  /**
+   * EPL group contenst
+   */
+  {
+    name: "Facebook contest app",
+    company: "EPL Group",
+    start: new Date("2009-09"),
+    end: new Date("2009-11"),
+
+    description: "Internship in the EU contest app on Facebook",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 1,
+
+    title: "Web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "Doctrine",
+      "Facebook API",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+    ],
+  },
+
+  /**
+   * EUCE music
+   */
+  {
+    name: "EUCE music",
+    company: "Centrum Krzysztofa Pendereckiego",
+    start: new Date("2009-05"),
+    end: new Date("2009-08"),
+
+    description: "Portal and custom CMS",
+    form: "employee",
+    softwareHouse: "High Quality Solutions",
+    team: 2,
+
+    title: "Web developer",
+    area: "fullstack",
+    skills: [
+      "CSS",
+      "Doctrine",
+      "JavaScript",
+      "jQuery",
+      "MySQL",
+      "PHP",
+      "SQL",
+      "Symfony",
+    ],
+  },
+
+  /**
+   * Job postings scrapper
+   */
+  {
+    name: "Job offers crawler",
+    company: "Gemius",
+    start: new Date("2009-02"),
+    end: new Date("2009-04"),
+
+    description: "Tool to crawl, scrap and process online job postings",
+    form: "employee",
+    team: 1,
+
+    title: "Software Developer",
+    area: "backend",
+    skills: ["Python"],
+  },
+
+  /**
+   * ExtJs
+   */
+  {
+    name: "Database Interface",
+    company: "Gemius",
+    start: new Date("2008-11"),
+    end: new Date("2009-01"),
+
+    description: "Modernisation of graphical interface for database warehouse",
+    form: "employee",
+    team: 1,
+
+    title: "Software Developer",
+    area: "frontend",
+    skills: ["ExtJS", "JavaScript"],
+  },
+
+  /**
+   * Mantis
+   */
+  {
+    name: "Bug tracker",
+    company: "Gemius",
+    start: new Date("2008-09"),
+    end: new Date("2008-10"),
+
+    description: "Customization of Mantis bug tracker",
+    form: "employee",
+    team: 1,
+
+    title: "Software Developer",
+    area: "fullstack",
+    skills: ["PHP", "CSS"],
+  },
+
+  /**
+   * Orange
+   */
+  {
+    name: "Software analysis",
+    company: "Orange Polska",
+    start: new Date("2008-04"),
+    end: new Date("2008-08"),
+
+    description: "ERP changes and migrating accounting schema",
+    form: "employee",
+    team: 5,
+
+    title: "Analyst",
+    area: "analysis",
+    skills: ["Oracle", "PL/SQL", "SQL", "UML"],
+  },
+
+  /**
+   * Armir
+   */
+  {
+    name: "IACS",
+    company: "ARiMR",
+    start: new Date("2008-01"),
+    end: new Date("2008-03"),
+
+    description: "Changes in EU system to finance agriculture",
+    form: "employee",
+    softwareHouse: "ABG Spin",
+    team: 1,
+
+    title: "Analyst",
+    area: "analysis",
+    skills: ["Oracle", "PL/SQL", "SQL", "UML"],
+  },
+
+  /**
+   * Project Management
+   */
+  {
+    name: "Project management",
+    company: "Software Business Group",
+    start: new Date("2007-02"),
+    end: new Date("2007-12"),
+
+    description: "Projects for Polish Television, Feuvert and Wasa-Barilla",
+    form: "employee",
+    softwareHouse: "Software Business Group",
+    team: 5,
+
+    title: "Project Manager",
+    area: "management",
+    skills: [],
+  },
+
+  /**
+   * P2P computations
+   */
+  {
+    name: "P2P computations",
+    company: "PJWSTK employee",
+    start: new Date("2007-01"),
+    end: new Date("2007-01"),
+
+    description: "Framework to run scripts in Peer to Peer grid",
+    form: "freelancer",
+    remote: true,
+    team: 1,
+
+    title: "Software Developer",
+    skills: ["Java"],
+    area: "backend",
+  },
+
+  /**
+   * Joko ERP
+   */
+  {
+    name: "ERP",
+    company: "JOKO Cosmetics",
+    start: new Date("2006-02"),
+    end: new Date("2006-12"),
+
+    description:
+      "Warehouse, orders and an evolutionary algorithm for production planning",
+    form: "employee",
+    softwareHouse: "Software Business Group",
+    team: 6,
+
+    title: "Software Architect",
+    area: "backend",
+    skills: ["UML", "Java"],
+  },
+
+  /**
+   * CMS deployments
+   */
+  {
+    name: "CMS deployments",
+    company: "Milch und Zucker",
+    start: new Date("2005-12"),
+    end: new Date("2006-01"),
+
+    description: "Rewrite of a deployment engine in Milch und Zucker CMS",
+    form: "employee",
+    softwareHouse: "Software Business Group",
+    team: 2,
+
+    title: "Software Architect",
+    area: "backend",
+    skills: ["PHP", "SQL", "MySQL"],
+  },
+
+  /**
+   * Ministry of Environment
+   */
+  {
+    name: "Projects database",
+    company: "Ministry of Environment",
+    start: new Date("2005-09"),
+    end: new Date("2005-11"),
+
+    description: "Interactive map to describe ministry projects",
+    form: "employee",
+    softwareHouse: "Software Business Group",
+    team: 2,
+
+    title: "Web Developer",
+    area: "backend",
+    skills: ["MySQL", "PHP", "SQL"],
+  },
+
+  /**
+   * XY statistics
+   */
+  {
+    name: "XY statistics",
+    company: "Milch und Zucker",
+    start: new Date("2005-07"),
+    end: new Date("2005-08"),
+
+    description: "Custom ROLAP solution",
+    form: "employee",
+    softwareHouse: "Software Business Group",
+    team: 2,
+
+    title: "Web Developer",
+    area: "backend",
+    skills: ["MySQL", "PHP", "SQL"],
+  },
+
+  /**
+   * GOLF
+   */
+  {
+    name: "GOLF",
+    company: "Polish Golf Union",
+    start: new Date("2005-02"),
+    end: new Date("2005-06"),
+
+    description: "System to run golf tournaments and country league",
+    form: "freelancer",
+    softwareHouse: "Microsoft S2B",
+    remote: true,
+    team: 5,
+
+    title: "Lead Analyst",
+    area: "analysis",
+    skills: ["SQL Server", "SQL", "UML"],
+  },
+
+  /**
+   * Triplan
+   */
+  {
+    name: "Partition wall designer",
+    company: "Triplan",
+    start: new Date("2004-12"),
+    end: new Date("2005-01"),
+
+    description: "Partition wall drag and drop composer",
+    form: "freelancer",
+    remote: true,
+    team: 1,
+
+    title: "Software Developer",
+    area: "frontend",
+    skills: ["ActionScript", "UI design"],
+  },
+
+  /**
+   * Warsaw Creator
+   */
+  {
+    name: "Warsaw Creator",
+    company: "Ula Białowąs",
+    start: new Date("2004-07"),
+    end: new Date("2004-09"),
+
+    description: "Drag and drop editior of alternative Warsaw postcard",
+    form: "freelancer",
+    remote: true,
+    team: 1,
+
+    title: "Software Developer",
+    area: "fullstack",
+    skills: ["ActionScript", "CSS", "MySQL"],
+  },
+
+  /**
+   * Okrasko
+   */
+  {
+    name: "Okrasko Homepage",
+    company: "Ania Okrasko",
+    start: new Date("2004-02"),
+    end: new Date("2004-03"),
+
+    description: "Painter's portfolio.",
+    form: "freelancer",
+    remote: true,
+    team: 1,
+
+    title: "Web developer",
+    area: "frontend",
+    skills: ["PHP", "CSS", "UI design"],
   },
 ]
 
