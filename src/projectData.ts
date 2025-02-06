@@ -558,12 +558,41 @@ const projectData: Project[] = [
   },
 
   /**
+   * Personal Lawyers
+   */
+  {
+    name: "Personal Lawyers",
+    company: "Juszkiewicz Lawyers",
+    start: new Date("2014-07"),
+    end: new Date("2014-07"),
+
+    description: "Messanger for office and its customers",
+    side: true,
+    form: "employee",
+    softwareHouse: "Hemnes",
+    team: 2,
+
+    title: "Software Developer",
+    lead: true,
+    area: "backend",
+    skills: [
+      "Capistrano",
+      "Capybara",
+      "Haml",
+      "Rails",
+      "RSpec",
+      "Ruby",
+      "UI design",
+    ],
+  },
+
+  /**
    * Logneto
    */
   {
     name: "Logneto",
     company: "DMT",
-    start: new Date("2014-06"),
+    start: new Date("2014-05"),
     end: new Date("2014-12"),
 
     description: "Warehouse solution for eCommerce",
@@ -589,34 +618,6 @@ const projectData: Project[] = [
       "SQL",
       "UI design",
       "UML",
-    ],
-  },
-
-  /**
-   * Personal Lawyers
-   */
-  {
-    name: "Personal Lawyers",
-    company: "Juszkiewicz Lawyers",
-    start: new Date("2014-05"),
-    end: new Date("2014-05"),
-
-    description: "Messanger for office and its customers",
-    form: "employee",
-    softwareHouse: "Hemnes",
-    team: 2,
-
-    title: "Software Developer",
-    lead: true,
-    area: "backend",
-    skills: [
-      "Capistrano",
-      "Capybara",
-      "Haml",
-      "Rails",
-      "RSpec",
-      "Ruby",
-      "UI design",
     ],
   },
 
@@ -1052,7 +1053,7 @@ const projectData: Project[] = [
   {
     name: "Project management",
     company: "Software Business Group",
-    start: new Date("2007-02"),
+    start: new Date("2007-01"),
     end: new Date("2007-12"),
 
     description: "Projects for Polish Television, Feuvert and Wasa-Barilla",
@@ -1071,17 +1072,42 @@ const projectData: Project[] = [
   {
     name: "P2P computations",
     company: "PJWSTK employee",
-    start: new Date("2007-01"),
-    end: new Date("2007-01"),
+    start: new Date("2006-10"),
+    end: new Date("2006-11"),
 
     description: "Framework to run scripts in Peer to Peer grid",
-    form: "freelancer",
     remote: true,
+    side: true,
+    form: "freelancer",
     team: 1,
 
     title: "Software Developer",
     skills: ["Java"],
     area: "backend",
+  },
+
+  /**
+   * Bank of Irleand
+   */
+  {
+    name: "IOBI",
+    company: "Bank of Irleand",
+    start: new Date('2006-06'),
+    end: new Date('2006-08'),
+
+    description: "Architecture consultations for Institute of Bankers in Ireland banks communication platform.",
+    side: true,
+    form: "freelancer",
+    softwareHouse: "Gateway to Future",
+    team: 5,
+
+    title: "Software Architect",
+    area: "backend",
+    skills: [
+      "Oracle",
+      "PHP",
+      "UML", 
+    ],
   },
 
   /**
@@ -1091,7 +1117,7 @@ const projectData: Project[] = [
     name: "ERP",
     company: "JOKO Cosmetics",
     start: new Date("2006-02"),
-    end: new Date("2006-12"),
+    end: new Date("2007-12"),
 
     description:
       "Warehouse, orders and an evolutionary algorithm for production planning",
