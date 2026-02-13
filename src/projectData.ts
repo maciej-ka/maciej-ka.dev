@@ -36,6 +36,40 @@ const projectData: Project[] = [
    * Yousty
    */
   {
+    name: "NoCode-X",
+    company: "NoCode-X",
+    start: new Date("2025-06"),
+
+    description: "Low code plaform",
+    link: "https://www.nocode-x.com/",
+    remote: true,
+    form: "contractor",
+    softwareHouse: "UpVanta",
+    team: 2,
+
+    title: "Senior Software Engineer",
+    area: "fullstack",
+    skills: [
+      "Angular",
+      "Docker",
+      "Google Cloud",
+      "Helm",
+      "Hibernate",
+      "Java",
+      "Kafka",
+      "Kubernetes",
+      "MongoDB",
+      "PostgreSQL",
+      "React",
+      "Spring",
+      "Typescript",
+    ],
+  },
+
+  /**
+   * Yousty
+   */
+  {
     name: "Yousty",
     company: "Yousty",
     start: new Date("2024-11"),
