@@ -115,7 +115,7 @@ const projectData: Project[] = [
     link: "https://zamics.de/en/",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 3,
 
     title: "Mobile Web Developer",
@@ -146,7 +146,7 @@ const projectData: Project[] = [
     link: "https://www.zeppelin-powersystems.com/de/en/solutions/digital-solutions/aec-view/",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 4,
 
     title: "Lead Fullstack Developer",
@@ -184,7 +184,7 @@ const projectData: Project[] = [
     link: "https://www.klickrent.de/",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 4,
 
     title: "Senior Frontend Developer",
@@ -212,7 +212,7 @@ const projectData: Project[] = [
     description: "Dashboard with city statistics",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 2,
 
     title: "Lead Frontend Developer",
@@ -241,7 +241,7 @@ const projectData: Project[] = [
     description: "Web app for monitoring large wind farms",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 2,
 
     title: "Analyst",
@@ -262,7 +262,7 @@ const projectData: Project[] = [
     side: true,
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 1,
 
     title: "Frontend Developer",
@@ -300,7 +300,7 @@ const projectData: Project[] = [
     description: "VoIP client with video calls",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 8,
 
     title: "Frontend Developer",
@@ -334,7 +334,7 @@ const projectData: Project[] = [
     description: "VoIP client with video calls",
     remote: true,
     form: "contractor",
-    softwareHouse: "Inetum",
+    softwareHouse: "IMPAQ",
     team: 6,
 
     title: "Backend Developer",
