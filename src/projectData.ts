@@ -33,7 +33,7 @@ type Project = {
 
 const projectData: Project[] = [
   /**
-   * Yousty
+   * NoCode-X
    */
   {
     name: "NoCode-X",
@@ -51,18 +51,22 @@ const projectData: Project[] = [
     area: "fullstack",
     skills: [
       "Angular",
+      "Cloud",
       "Docker",
       "Google Cloud",
       "Helm",
       "Hibernate",
       "Java",
+      "Junit",
       "Kafka",
       "Kubernetes",
       "MongoDB",
-      "PostgreSQL",
+      "MySQL",
+      "Playwright",
       "React",
       "Spring",
       "Typescript",
+      "UML",
     ],
   },
 
@@ -154,6 +158,7 @@ const projectData: Project[] = [
     area: "fullstack",
     skills: [
       "AWS",
+      "Cloud",
       "CSS",
       "Cypress",
       "Docker",
@@ -272,6 +277,7 @@ const projectData: Project[] = [
       "Amplify",
       "Apollo",
       "Appsync",
+      "Cloud",
       "CSS",
       "Can Bus",
       "Cypress",
@@ -1116,7 +1122,7 @@ const projectData: Project[] = [
     team: 1,
 
     title: "Software Developer",
-    skills: ["Java"],
+    skills: ["Java", "UML"],
     area: "backend",
   },
 
@@ -1140,7 +1146,7 @@ const projectData: Project[] = [
     skills: [
       "Oracle",
       "PHP",
-      "UML", 
+      "UML",
     ],
   },
 
@@ -1180,7 +1186,7 @@ const projectData: Project[] = [
 
     title: "Software Architect",
     area: "backend",
-    skills: ["PHP", "SQL", "MySQL"],
+    skills: ["MySQL", "PHP", "SQL", "UML"],
   },
 
   /**
@@ -1218,7 +1224,7 @@ const projectData: Project[] = [
 
     title: "Web Developer",
     area: "backend",
-    skills: ["MySQL", "PHP", "SQL"],
+    skills: ["MySQL", "PHP", "SQL", "UML"],
   },
 
   /**
