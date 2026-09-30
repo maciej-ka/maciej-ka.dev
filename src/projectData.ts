@@ -163,6 +163,7 @@ const projectData: Project[] = [
       "Cypress",
       "Docker",
       "Express",
+      "Java",
       "JavaScript",
       "Jest",
       "Knex.js",
